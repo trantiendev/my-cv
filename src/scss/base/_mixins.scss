@@ -1,0 +1,36 @@
+@mixin mediaquery--not-lg() {
+  @media (max-width: $sreen-pc - 1) {
+    @content
+  }
+}
+
+@mixin mediaquery--lg() {
+  @media (min-width: $sreen-pc) {
+    @content
+  }
+}
+
+@mixin mediaquery--md() {
+  @media (max-width: $sreen-pc - 1) {
+    @content
+  }
+}
+
+@mixin mediaquery--sm() {
+  @media (max-width: $sreen-mobile - 1) {
+    @content
+  }
+}
+
+@mixin centered($horizontal, $vertical) {
+  position: absolute;
+  left: $horizontal;
+  top: $vertical;
+  transform: translate(-$horizontal, -$vertical);
+}
+
+@mixin flexbox($justify, $align) {
+  align-items: $align;
+  display: flex;
+  justify-content: $justify;
+}

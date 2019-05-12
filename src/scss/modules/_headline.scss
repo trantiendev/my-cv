@@ -1,0 +1,23 @@
+[class^='headline'] {
+  font-weight: 600;
+}
+
+.headline--lg {
+  font-size: $font-size-xl;
+  color: $primary-color;
+  text-align: center;
+
+  span {
+    color: $primary-scale-1;
+  }
+}
+
+.headline--md {
+  font-size: $font-size-md;
+  color: $primary-scale-1;
+  margin-bottom: 8px;
+}
+
+.headline {
+  font-size: 20px;
+}

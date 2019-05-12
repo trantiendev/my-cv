@@ -1,0 +1,87 @@
+.accordion-group {
+  &__headline {
+    padding-top: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $danger-color;
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $primary-scale-1;
+    }
+  }
+
+  + .accordion-group {
+    margin-top: 32px;
+  }
+}
+
+.accordion {
+  &__header {
+    @include flexbox(space-between, center);
+    background-color: $light-color;
+    border-bottom: 1px solid $gray-scale-1;
+    padding: 32px;
+    cursor: pointer;
+  }
+
+  &__body {
+    background-color: $gray-scale-1;
+    padding: 24px 32px;
+    display: none;
+  }
+
+  &__block + &__block {
+    margin-top: 32px;
+  }
+
+  &__lead {
+    margin-bottom: 16px;
+  }
+
+  &__collapse {
+    height: 32px;
+    width: 32px;
+    position: relative;
+
+    &:after,
+    &:before {
+      @include centered(50%, 50%);
+      content: '';
+      position: absolute;
+      border-radius: 2px;
+      background-color: $dark-color;
+      transition: all .4s cubic-bezier(.68, -.55, .265, 1.55);
+    }
+
+    &:after {
+      width: 2px;
+      height: 16px;
+    }
+
+    &:before {
+      width: 16px;
+      height: 2px;
+    }
+  }
+
+  &.is-active {
+    .accordion__header {
+      border-bottom-color: $light-color;
+      background-color: $gray-scale-1;
+    }
+
+    .accordion__body {
+      display: block;
+    }
+
+    .accordion__collapse {
+      &:after,
+      &:before {
+        background-color: $primary-color;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}

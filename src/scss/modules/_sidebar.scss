@@ -1,0 +1,38 @@
+.sidebar {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+
+  &__image {
+    display: block;
+  }
+
+  &__headline {
+    text-transform: uppercase;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  &__lead {
+    margin-bottom: 8px;
+  }
+
+  &__block {
+    padding: 16px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    + .sidebar__block {
+      border-top: 1px solid;
+      border-bottom: 0;
+      border-image: linear-gradient(90deg, transparent, rgba($dark-color, 0.8), transparent) 1;
+    }
+  }
+
+  &__body {
+    padding: 16px;
+    position: relative;
+    background-color: rgba($light-color, .7);
+  }
+}

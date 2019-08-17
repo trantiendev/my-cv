@@ -1,35 +1,11 @@
 .list {
-  .list-item {
-    list-style: none;
-    font-size: 0;
-
-    + .list-item {
-      margin-top: 4px;
-    }
+  &__item {
+    padding: 4px 0;
+    color: rgba($dark-color, 0.8);
   }
 
-  .label,
-  .text {
-    display: inline-block;
-    font-size: 16px;
-  }
-
-  .label {
-    font-weight: 600;
-    margin-right: 4px;
-  }
-}
-
-.dot-list li {
-  padding-left: 16px;
-  position: relative;
-
-  &:before {
-    @include centered(0, 50%);
-    content: '';
-    width: 4px;
-    height: 4px;
-    border-radius: $radius-circle;
-    background-color: $dark-color;
+  &__icon {
+    margin-right: 8px;
+    width: 20px;
   }
 }

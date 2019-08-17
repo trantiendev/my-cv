@@ -20,7 +20,10 @@ $light-color: #fff !default;
 $dark-color: #333 !default;
 $gray-color: #dbdbdb !default;
 $gray-scale-1: lighten($gray-color, 10%);
+$gray-scale-2: #757575;
 $body-font-color: $dark-color !default;
+$green-scale-1: #e3f5e0;
+$green-scale-2: #40bf48;
 
 // Font family
 $base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;

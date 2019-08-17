@@ -10,10 +10,11 @@
   }
 
   &--primary {
-    color: $primary-color;
+    color: rgba($dark-color, 0.8);
+    text-decoration: none;
 
     &:hover {
-      color: darken($primary-color, 20%);
+      text-decoration: underline;
     }
   }
 }
